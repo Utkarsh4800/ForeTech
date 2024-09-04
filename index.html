@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNiti: An Event for Creative Heads</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            background-color: #8e51cb;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            justify-content: space-between; /* Align content properly */
+            align-items: center;
+        }
+
+        .logo-group {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 80px; /* Adjust size of the logo */
+            height: auto;
+            margin-right: 50px;
+            margin-left: 50px; 
+        }
+
+        .logo h1 {
+            float: left;
+            margin: 0;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center; /* Center the navigation links */
+            margin-top: 10px;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center; /* Center the list items */
+            align-items: center;
+        }
+
+        .nav-links li {
+            margin: 0 20px;
+        }
+
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.6;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            color: #fff;
+            background: #e74c3c;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #c0392b;
+        }
+
+        .about, .events, .contact {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .about h2, .events h2, .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .event-cards {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(33.333% - 20px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            font-size: 1rem;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo-group">
+                <!-- First Logo -->
+                <div class="logo">
+                    <a href="https://www.fsm.ac.in" target="_blank">
+                        <img src="logo.png" alt="FSM Logo">
+                    </a>
+                </div>
+                <!-- Second Logo -->
+                <div class="logo">
+                    <a href="http://genesis.fsm.ac.in" target="_blank">
+                        <img src="genesis_white.png" alt="Fore Tech Logo">
+                    </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#contact">Register</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="right-logo-group">
+                <!-- First Right Logo -->
+                <div class="logo">
+                    <a href="https://www.instagram.com/nexus.fore/" target="_blank">
+                        <img src="nexus.png" alt="First Right Logo">
+                    </a>
+                </div>
+            </div>
+            <div class="logo">
+                <a href="https://www.instagram.com/fore_tech/" target="_blank">
+                    <img src="ft.png" alt="Second Right Logo">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <!-- Video Background -->
+        <video autoplay muted loop>
+            <source src="FORE TECHNICAL DIVISION.MP4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-content">
+            <h2>An event for creative heads to showcase their talent</h2>
+            <p>Unleash your creativity and convey your ideas or knowledge through crisp and precise graphic visual representations.</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>About Techनीति</h2>
+            <p>TechNiti is a premier event that provides a platform for creative individuals to showcase their talent. Whether you're a designer, artist, or tech enthusiast, TechNiti is the perfect stage to exhibit your skills through innovative visual presentations.</p>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events" id="events">
+        <div class="container">
+            <h2>Event Highlights and Registeration </h3>
+            <div class="event-cards">
+                <div class="card">
+                    <h3>Design Challenge</h3>
+                    <p>Compete with the best designers to create visually stunning graphics that convey complex ideas with clarity.</p>
+                </div>
+                <div class="card">
+                    <h3>Innovation Showcase</h3>
+                    <p>Present your cutting-edge projects and gain recognition for your innovative solutions in the tech industry.</p>
+                </div>
+                <div class="card">
+                    <h3>Workshops & Talks</h3>
+                    <p>Attend workshops and talks by industry experts and gain insights into the latest trends in technology and design.</p>
+                </div>
+                <div class="card">
+                    <h3> Register </h3>
+                    <p>To participate in TechNiti, please register using the link below:</p>
+                    <a href="https://docs.google.com/forms/d/1EwaFsJ2SHziL2d-SuB2rlF58WlATO9I_FjLx_8LeaFs/edit" class="btn" target="_blank">Register Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 TechNiti. All Rights Reserved.</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
